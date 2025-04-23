@@ -1,7 +1,7 @@
 /* import React from 'react'; */
-import './LoginPage.css';
+import './Login.css';
 
-function App() {
+function Login() {
   return (
     <div className="login-wrapper">
       <div className="login-card">
@@ -33,5 +33,5 @@ function App() {
   );
 }
 
-export default App
+export default Login
 
