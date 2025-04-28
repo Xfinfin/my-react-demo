@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HTML DOM 畫面操作</h2>
+    <div id="content">練習網頁畫面操作</div>
+    <button onclick="change()">Click</button>
+    <script>
+        function change() {
+            //取得標籤內容
+            let content = document.querySelector("#content");
+            //操作標籤物件且更換內容
+            content.innerHTML = "對特定的標籤操作"
+            content.className = "text";
+            content.style.fontSize = "30px"
+            content.style.color = "red";
+        }
+
+    </script>
+</body>
+</body>
+
+</html>

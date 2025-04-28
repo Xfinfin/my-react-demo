@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--   <div>
+        <span onclick="changeToPage1();">Page1</span>
+        <span onclick="changeToPage2();">Page2</span>
+        <span onclick="changeToPage3();">Page3</span>
+    </div>
+    <hr> -->
+    <div id="page1">這裡是第一頁</div>
+    <div id="page2" style="display: none;">這裡是第二頁</div>
+    <div id="page3" style="display: none;">這裡是第三頁</div>
+
+    <button id="btn1" onclick="step2();">下一步</button>
+    <button id="btn2" onclick="step1();" style="display:none;">上一步</button>
+    <button id="btn3" onclick="step3();" style="display:none;">下一步</button>
+    <button id="btn4" onclick="step2();" style="display:none;">上一步</button>
+    <script>
+        function step1() {
+            document.querySelector("#page1").style.display = "block";
+            document.querySelector("#page2").style.display = "none";
+            document.querySelector("#page3").style.display = "none";
+
+            document.querySelector("#btn1").style.display = "block";
+            document.querySelector("#btn2").style.display = "none";
+            document.querySelector("#btn3").style.display = "none";
+            document.querySelector("#btn4").style.display = "none";
+        }
+        function step2() {
+            document.querySelector("#page1").style.display = "none";
+            document.querySelector("#page2").style.display = "block";
+            document.querySelector("#page3").style.display = "none";
+
+            // 管理按鈕
+            document.querySelector("#btn1").style.display = "none";
+            document.querySelector("#btn2").style.display = "block";
+            document.querySelector("#btn3").style.display = "block";
+            document.querySelector("#btn4").style.display = "none";
+
+        }
+        function step3() {
+            document.querySelector("#page1").style.display = "none";
+            document.querySelector("#page2").style.display = "none";
+            document.querySelector("#page3").style.display = "block";
+
+            document.querySelector("#btn1").style.display = "none";
+            document.querySelector("#btn2").style.display = "none";
+            document.querySelector("#btn3").style.display = "none";
+            document.querySelector("#btn4").style.display = "block";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
