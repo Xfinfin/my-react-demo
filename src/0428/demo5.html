@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page1">這裡是第一頁</div>
+    <div id="page2" style="display: none;">這裡是第二頁</div>
+    <div id="page3" style="display: none;">這裡是第三頁</div>
+
+    <button id="btn1" onclick="changePage(2);">下一步</button>
+    <button id="btn2" onclick="changePage(1);" style="display:none;">上一步</button>
+    <button id="btn3" onclick="changePage(3);" style="display:none;">下一步</button>
+    <button id="btn4" onclick="changePage(2);" style="display:none;">上一步</button>
+
+    <script>
+        // 改變頁面和按鈕顯示狀態的函數
+        function changePage(pageNumber) {
+            // 隱藏所有頁面
+            document.querySelector("#page1").style.display = "none";
+            document.querySelector("#page2").style.display = "none";
+            document.querySelector("#page3").style.display = "none";
+
+            // 顯示對應頁面
+            document.querySelector("#page" + pageNumber).style.display = "block";
+
+            // 管理按鈕顯示
+            if (pageNumber === 1) {
+                toggleButtons("btn1", "btn2");
+            } else if (pageNumber === 2) {
+                toggleButtons("btn2", "btn3");
+            } else if (pageNumber === 3) {
+                toggleButtons("btn4");
+            }
+        }
+
+        // 控制按鈕顯示或隱藏的函數
+        function toggleButtons(...buttons) {
+            // 先隱藏所有按鈕
+            document.querySelectorAll("button").forEach(button => {
+                button.style.display = "none";
+            });
+
+            // 顯示傳入的按鈕
+            buttons.forEach(buttonId => {
+                document.querySelector("#" + buttonId).style.display = "block";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
