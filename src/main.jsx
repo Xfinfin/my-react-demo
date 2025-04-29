@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './0422-2/login/Resigter/Resigter.jsx'
+import App from './0429/App.jsx'
 /* import './index.css' */
 import './style.css'
 import { BrowserRouter } from 'react-router-dom'
